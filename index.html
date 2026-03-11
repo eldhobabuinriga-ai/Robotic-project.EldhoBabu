@@ -7,35 +7,40 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Robotic Project</h1>
-    <p class="subtitle">Eldho Babu - Wokwi Robotics Tasks</p>
+  <header class="hero">
+    <div class="container">
+      <h1>Robotic Project</h1>
+      <p class="subtitle">Arduino and Wokwi Simulation Tasks by Eldho Babu</p>
+    </div>
   </header>
 
-  <main>
-    <section class="intro">
+  <main class="container">
+    <section class="section intro">
       <h2>Project Overview</h2>
       <p>
-        This project contains four Arduino tasks created in Wokwi simulation.
-        Each task demonstrates a basic electronics and robotics control concept
-        using Arduino UNO.
+        This robotics project contains four Arduino-based tasks developed using
+        Wokwi simulation. Each task demonstrates a basic embedded systems concept
+        such as LED blinking, analog input control, push-button interaction, and
+        buzzer output.
       </p>
     </section>
 
-    <section class="task-card">
-      <h2>Task 1 - Blinking LED</h2>
-      <p>
-        In this task, an LED is connected to Arduino pin 13. The LED turns ON
-        for 1 second and OFF for 1 second continuously using delay control.
-      </p>
-      <h3>Components Used</h3>
-      <ul>
-        <li>Arduino UNO</li>
-        <li>LED</li>
-        <li>Resistor</li>
-      </ul>
-      <h3>Code</h3>
-      <pre><code>void setup() {
+    <section class="section">
+      <h2>Tasks</h2>
+
+      <div class="task-grid">
+        <div class="card">
+          <h3>Task 1 - Blinking LED</h3>
+          <p>
+            An LED connected to Arduino pin 13 blinks continuously with a delay
+            of 1 second ON and 1 second OFF.
+          </p>
+          <ul>
+            <li>Arduino UNO</li>
+            <li>LED</li>
+            <li>Resistor</li>
+          </ul>
+          <pre><code>void setup() {
   pinMode(13, OUTPUT);
 }
 
@@ -45,25 +50,22 @@ void loop() {
   digitalWrite(13, LOW);
   delay(1000);
 }</code></pre>
-      <p><a href="https://wokwi.com/projects/458152142119305217" target="_blank">Open Task 1 in Wokwi</a></p>
-    </section>
+          <a class="btn" href="https://wokwi.com/projects/458152142119305217" target="_blank">View Task 1</a>
+        </div>
 
-    <section class="task-card">
-      <h2>Task 2 - Potentiometer Controls LED Brightness</h2>
-      <p>
-        In this task, a potentiometer is used to control the brightness of an
-        LED. The analog value from the potentiometer is read and mapped to PWM
-        output for the LED.
-      </p>
-      <h3>Components Used</h3>
-      <ul>
-        <li>Arduino UNO</li>
-        <li>Potentiometer</li>
-        <li>LED</li>
-        <li>Resistor</li>
-      </ul>
-      <h3>Code</h3>
-      <pre><code>int pot = A0;
+        <div class="card">
+          <h3>Task 2 - Potentiometer Controls LED</h3>
+          <p>
+            The potentiometer value is read through analog input and mapped to
+            PWM output to control LED brightness.
+          </p>
+          <ul>
+            <li>Arduino UNO</li>
+            <li>Potentiometer</li>
+            <li>LED</li>
+            <li>Resistor</li>
+          </ul>
+          <pre><code>int pot = A0;
 int led = 9;
 
 void setup() {
@@ -74,34 +76,25 @@ void setup() {
 void loop() {
   int value = analogRead(pot);
   int brightness = map(value, 0, 1023, 0, 255);
-
   analogWrite(led, brightness);
-
-  Serial.print("Pot Value: ");
-  Serial.print(value);
-  Serial.print("  Brightness: ");
-  Serial.println(brightness);
-
   delay(200);
 }</code></pre>
-      <p><a href="https://wokwi.com/projects/458153741241944065" target="_blank">Open Task 2 in Wokwi</a></p>
-    </section>
+          <a class="btn" href="https://wokwi.com/projects/458153741241944065" target="_blank">View Task 2</a>
+        </div>
 
-    <section class="task-card">
-      <h2>Task 3 - Push Button Controls LED</h2>
-      <p>
-        In this task, a push button is used to control an LED. When the button
-        is pressed, the LED turns ON. When the button is released, the LED turns OFF.
-      </p>
-      <h3>Components Used</h3>
-      <ul>
-        <li>Arduino UNO</li>
-        <li>Push Button</li>
-        <li>LED</li>
-        <li>Resistor</li>
-      </ul>
-      <h3>Code</h3>
-      <pre><code>int button = 2;
+        <div class="card">
+          <h3>Task 3 - Push Button Controls LED</h3>
+          <p>
+            Pressing the push button turns the LED ON. Releasing the button
+            turns the LED OFF.
+          </p>
+          <ul>
+            <li>Arduino UNO</li>
+            <li>Push Button</li>
+            <li>LED</li>
+            <li>Resistor</li>
+          </ul>
+          <pre><code>int button = 2;
 int led = 13;
 
 void setup() {
@@ -116,23 +109,21 @@ void loop() {
     digitalWrite(led, LOW);
   }
 }</code></pre>
-    <p><a href="https://wokwi.com/projects/458185856014685185" target="_blank">Open Task 3 in Wokwi</a></p>
-    </section>
+          <a class="btn" href="https://wokwi.com/projects/458185856014685185" target="_blank">View Task 3</a>
+        </div>
 
-    <section class="task-card">
-      <h2>Task 4 - Push Button Controls Buzzer</h2>
-      <p>
-        In this task, a push button is used to control a buzzer. When the button
-        is pressed, the buzzer turns ON. When the button is released, the buzzer turns OFF.
-      </p>
-      <h3>Components Used</h3>
-      <ul>
-        <li>Arduino UNO</li>
-        <li>Push Button</li>
-        <li>Buzzer</li>
-      </ul>
-      <h3>Code</h3>
-      <pre><code>int button = 2;
+        <div class="card">
+          <h3>Task 4 - Push Button Controls Buzzer</h3>
+          <p>
+            Pressing the push button activates the buzzer. Releasing the button
+            turns the buzzer OFF.
+          </p>
+          <ul>
+            <li>Arduino UNO</li>
+            <li>Push Button</li>
+            <li>Buzzer</li>
+          </ul>
+          <pre><code>int button = 2;
 int buzzer = 8;
 
 void setup() {
@@ -147,12 +138,23 @@ void loop() {
     digitalWrite(buzzer, LOW);
   }
 }</code></pre>
-<p><a href="https://wokwi.com/projects/458225116736353281" target="_blank">Open Task 4 in Wokwi</a></p>
+          <a class="btn" href="https://wokwi.com/projects/458225116736353281" target="_blank">View Task 4</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Conclusion</h2>
+      <p>
+        These four tasks helped build a foundation in Arduino programming,
+        digital input/output, analog input reading, PWM control, and basic
+        circuit interaction using the Wokwi simulator.
+      </p>
     </section>
   </main>
 
   <footer>
-    <p>Created by Eldho Babu | Robotics Project using Wokwi and Arduino</p>
+    <p>Created by Eldho Babu | Robotics Project Website</p>
   </footer>
 </body>
 </html>
