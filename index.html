@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Robotic Project - Eldho Babu</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Robotic Project</h1>
+    <p class="subtitle">Eldho Babu - Wokwi Robotics Tasks</p>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Project Overview</h2>
+      <p>
+        This project contains four Arduino tasks created in Wokwi simulation.
+        Each task demonstrates a basic electronics and robotics control concept
+        using Arduino UNO.
+      </p>
+    </section>
+
+    <section class="task-card">
+      <h2>Task 1 - Blinking LED</h2>
+      <p>
+        In this task, an LED is connected to Arduino pin 13. The LED turns ON
+        for 1 second and OFF for 1 second continuously using delay control.
+      </p>
+      <h3>Components Used</h3>
+      <ul>
+        <li>Arduino UNO</li>
+        <li>LED</li>
+        <li>Resistor</li>
+      </ul>
+      <h3>Code</h3>
+      <pre><code>void setup() {
+  pinMode(13, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(13, HIGH);
+  delay(1000);
+  digitalWrite(13, LOW);
+  delay(1000);
+}</code></pre>
+      <p><a href="https://wokwi.com/projects/458152142119305217" target="_blank">Open Task 1 in Wokwi</a></p>
+    </section>
+
+    <section class="task-card">
+      <h2>Task 2 - Potentiometer Controls LED Brightness</h2>
+      <p>
+        In this task, a potentiometer is used to control the brightness of an
+        LED. The analog value from the potentiometer is read and mapped to PWM
+        output for the LED.
+      </p>
+      <h3>Components Used</h3>
+      <ul>
+        <li>Arduino UNO</li>
+        <li>Potentiometer</li>
+        <li>LED</li>
+        <li>Resistor</li>
+      </ul>
+      <h3>Code</h3>
+      <pre><code>int pot = A0;
+int led = 9;
+
+void setup() {
+  pinMode(led, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  int value = analogRead(pot);
+  int brightness = map(value, 0, 1023, 0, 255);
+
+  analogWrite(led, brightness);
+
+  Serial.print("Pot Value: ");
+  Serial.print(value);
+  Serial.print("  Brightness: ");
+  Serial.println(brightness);
+
+  delay(200);
+}</code></pre>
+      <p><a href="https://wokwi.com/projects/458153741241944065" target="_blank">Open Task 2 in Wokwi</a></p>
+    </section>
+
+    <section class="task-card">
+      <h2>Task 3 - Push Button Controls LED</h2>
+      <p>
+        In this task, a push button is used to control an LED. When the button
+        is pressed, the LED turns ON. When the button is released, the LED turns OFF.
+      </p>
+      <h3>Components Used</h3>
+      <ul>
+        <li>Arduino UNO</li>
+        <li>Push Button</li>
+        <li>LED</li>
+        <li>Resistor</li>
+      </ul>
+      <h3>Code</h3>
+      <pre><code>int button = 2;
+int led = 13;
+
+void setup() {
+  pinMode(button, INPUT_PULLUP);
+  pinMode(led, OUTPUT);
+}
+
+void loop() {
+  if (digitalRead(button) == LOW) {
+    digitalWrite(led, HIGH);
+  } else {
+    digitalWrite(led, LOW);
+  }
+}</code></pre>
+      <p><a href="PASTE_TASK3_LINK_HERE" target="_blank">Open Task 3 in Wokwi</a></p>
+    </section>
+
+    <section class="task-card">
+      <h2>Task 4 - Push Button Controls Buzzer</h2>
+      <p>
+        In this task, a push button is used to control a buzzer. When the button
+        is pressed, the buzzer turns ON. When the button is released, the buzzer turns OFF.
+      </p>
+      <h3>Components Used</h3>
+      <ul>
+        <li>Arduino UNO</li>
+        <li>Push Button</li>
+        <li>Buzzer</li>
+      </ul>
+      <h3>Code</h3>
+      <pre><code>int button = 2;
+int buzzer = 8;
+
+void setup() {
+  pinMode(button, INPUT_PULLUP);
+  pinMode(buzzer, OUTPUT);
+}
+
+void loop() {
+  if (digitalRead(button) == LOW) {
+    digitalWrite(buzzer, HIGH);
+  } else {
+    digitalWrite(buzzer, LOW);
+  }
+}</code></pre>
+      <p><a href="PASTE_TASK4_LINK_HERE" target="_blank">Open Task 4 in Wokwi</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Created by Eldho Babu | Robotics Project using Wokwi and Arduino</p>
+  </footer>
+</body>
+</html>
