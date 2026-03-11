@@ -3,62 +3,161 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Robotics Project - Eldho Babu</title>
+  <title>Robotic Project</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="wrapper">
-    <div class="container">
-      <header>
-        <h1>Robotics Project</h1>
-        <p class="subtitle">Arduino and Wokwi Simulation Tasks by Eldho Babu</p>
-      </header>
+  <header class="hero">
+    <h1>Robotic Project</h1>
+    <p>Arduino and Wokwi Simulation Tasks by Eldho Babu</p>
+  </header>
 
-      <section>
-        <h2>Project Overview</h2>
-        <p>
-          This project contains four Arduino-based Wokwi tasks. Each task demonstrates
-          a basic robotics and embedded systems concept such as LED blinking,
-          brightness control, button input, and buzzer output.
-        </p>
-      </section>
+  <main class="main-content">
+    <section class="overview">
+      <h2>Project Overview</h2>
+      <p>
+        This robotics project contains four Arduino-based tasks developed using
+        Wokwi simulation. Each task demonstrates a basic embedded systems concept
+        such as LED blinking, analog input control, push-button interaction, and
+        buzzer output.
+      </p>
+    </section>
 
-      <section>
-        <h2>Task 1 – Blinking LED</h2>
-        <p>An LED connected to Arduino pin 13 blinks every second.</p>
-        <a class="btn" href="https://wokwi.com/projects/458152142119305217" target="_blank">Open Task 1 Simulation</a>
-      </section>
+    <section class="tasks-section">
+      <h2>Tasks</h2>
 
-      <section>
-        <h2>Task 2 – Potentiometer Controls LED</h2>
-        <p>The brightness of an LED changes using a potentiometer.</p>
-        <a class="btn" href="https://wokwi.com/projects/458153741241944065" target="_blank">Open Task 2 Simulation</a>
-      </section>
+      <div class="task-grid">
+        <div class="task-card">
+          <h3>Task 1 - Blinking LED</h3>
+          <p>
+            An LED connected to Arduino pin 13 blinks continuously with a delay
+            of 1 second ON and 1 second OFF.
+          </p>
 
-      <section>
-        <h2>Task 3 – Button Controls LED</h2>
-        <p>Pressing the push button turns the LED ON.</p>
-        <a class="btn" href="https://wokwi.com/projects/458185856014685185" target="_blank">Open Task 3 Simulation</a>
-      </section>
+          <ul>
+            <li>Arduino UNO</li>
+            <li>LED</li>
+            <li>Resistor</li>
+          </ul>
 
-      <section>
-        <h2>Task 4 – Button Controls Buzzer</h2>
-        <p>Pressing the button activates the buzzer.</p>
-        <a class="btn" href="https://wokwi.com/projects/458225116736353281" target="_blank">Open Task 4 Simulation</a>
-      </section>
+          <pre><code>void setup() {
+  pinMode(13, OUTPUT);
+}
 
-      <section>
-        <h2>Conclusion</h2>
-        <p>
-          These tasks helped build a foundation in Arduino programming, digital output,
-          analog input, push button control, and buzzer interfacing using Wokwi.
-        </p>
-      </section>
+void loop() {
+  digitalWrite(13, HIGH);
+  delay(1000);
+  digitalWrite(13, LOW);
+  delay(1000);
+}</code></pre>
 
-      <footer>
-        <p>Created by Eldho Babu | Robotics Project</p>
-      </footer>
-    </div>
-  </div>
+          <a class="btn" href="https://wokwi.com/projects/458152142119305217" target="_blank">Open Task 1</a>
+        </div>
+
+        <div class="task-card">
+          <h3>Task 2 - Potentiometer Controls LED</h3>
+          <p>
+            The potentiometer value is read through analog input and mapped to
+            PWM output to control LED brightness.
+          </p>
+
+          <ul>
+            <li>Arduino UNO</li>
+            <li>Potentiometer</li>
+            <li>LED</li>
+            <li>Resistor</li>
+          </ul>
+
+          <pre><code>int pot = A0;
+int led = 9;
+
+void setup() {
+  pinMode(led, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  int value = analogRead(pot);
+  int brightness = map(value, 0, 1023, 0, 255);
+  analogWrite(led, brightness);
+
+  Serial.print("Pot Value: ");
+  Serial.print(value);
+  Serial.print("  Brightness: ");
+  Serial.println(brightness);
+
+  delay(200);
+}</code></pre>
+
+          <a class="btn" href="https://wokwi.com/projects/458153741241944065" target="_blank">Open Task 2</a>
+        </div>
+
+        <div class="task-card">
+          <h3>Task 3 - Push Button Controls LED</h3>
+          <p>
+            Pressing the push button turns the LED ON. Releasing the button turns
+            the LED OFF.
+          </p>
+
+          <ul>
+            <li>Arduino UNO</li>
+            <li>Push Button</li>
+            <li>LED</li>
+            <li>Resistor</li>
+          </ul>
+
+          <pre><code>int button = 2;
+int led = 13;
+
+void setup() {
+  pinMode(button, INPUT_PULLUP);
+  pinMode(led, OUTPUT);
+}
+
+void loop() {
+  if (digitalRead(button) == LOW) {
+    digitalWrite(led, HIGH);
+  } else {
+    digitalWrite(led, LOW);
+  }
+}</code></pre>
+
+          <a class="btn" href="https://wokwi.com/projects/458185856014685185" target="_blank">Open Task 3</a>
+        </div>
+
+        <div class="task-card">
+          <h3>Task 4 - Push Button Controls Buzzer</h3>
+          <p>
+            Pressing the button activates the buzzer. Releasing the button turns
+            the buzzer OFF.
+          </p>
+
+          <ul>
+            <li>Arduino UNO</li>
+            <li>Push Button</li>
+            <li>Buzzer</li>
+          </ul>
+
+          <pre><code>int button = 2;
+int buzzer = 8;
+
+void setup() {
+  pinMode(button, INPUT_PULLUP);
+  pinMode(buzzer, OUTPUT);
+}
+
+void loop() {
+  if (digitalRead(button) == LOW) {
+    digitalWrite(buzzer, HIGH);
+  } else {
+    digitalWrite(buzzer, LOW);
+  }
+}</code></pre>
+
+          <a class="btn" href="https://wokwi.com/projects/458225116736353281" target="_blank">Open Task 4</a>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
