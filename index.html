@@ -3,161 +3,242 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Robotic Project</title>
+  <title>ROBOTICS PROJECT</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="bg-orb orb1"></div>
+  <div class="bg-orb orb2"></div>
+  <div class="bg-orb orb3"></div>
+
   <header class="hero">
-    <h1>Robotic Project</h1>
-    <p>Arduino and Wokwi Simulation Tasks by Eldho Babu</p>
+    <p class="tag">Arduino Portfolio</p>
+    <h1>ROBOTICS PROJECT</h1>
+    <p class="subtitle">
+      A colorful and futuristic project showcase with interactive project cards and live simulation links.
+    </p>
   </header>
 
-  <main class="main-content">
-    <section class="overview">
-      <h2>Project Overview</h2>
-      <p>
-        This robotics project contains four Arduino-based tasks developed using
-        Wokwi simulation. Each task demonstrates a basic embedded systems concept
-        such as LED blinking, analog input control, push-button interaction, and
-        buzzer output.
-      </p>
+  <main class="container">
+    <section class="project-grid">
+      <div class="project-card active" data-project="locker">
+        <span class="project-number">Project 01</span>
+        <h2>Locker Safety Indicator</h2>
+        <p>Used in school lockers for safety monitoring.</p>
+      </div>
+
+      <div class="project-card" data-project="fan">
+        <span class="project-number">Project 02</span>
+        <h2>Automatic Fan Speed Control</h2>
+        <p>Used in laptop cooling, smart home ventilation, and room fans.</p>
+      </div>
+
+      <div class="project-card" data-project="gate">
+        <span class="project-number">Project 03</span>
+        <h2>Parking Gate Control System</h2>
+        <p>Used in parking lots and apartment entrances.</p>
+      </div>
+
+      <div class="project-card" data-project="water">
+        <span class="project-number">Project 04</span>
+        <h2>Water Level Alert System</h2>
+        <p>Used in water tanks to prevent overflow.</p>
+      </div>
+
+      <div class="project-card" data-project="reaction">
+        <span class="project-number">Project 05</span>
+        <h2>Human Reaction Time Measurement System</h2>
+        <p>Used in sports training, reflex testing, and driving response checks.</p>
+      </div>
     </section>
 
-    <section class="tasks-section">
-      <h2>Tasks</h2>
+    <section class="details-panel">
+      <div id="locker" class="project-detail active">
+        <div class="detail-badge pink">Safety</div>
+        <h3>Locker Safety Indicator</h3>
+        <p class="detail-text">
+          This project is used in <strong>school lockers</strong> to monitor whether a locker is open or closed.
+          If the locker is left open, the warning indicator helps students and staff notice it quickly.
+        </p>
 
-      <div class="task-grid">
-        <div class="task-card">
-          <h3>Task 1 - Blinking LED</h3>
-          <p>
-            An LED connected to Arduino pin 13 blinks continuously with a delay
-            of 1 second ON and 1 second OFF.
-          </p>
-
-          <ul>
-            <li>Arduino UNO</li>
-            <li>LED</li>
-            <li>Resistor</li>
-          </ul>
-
-          <pre><code>void setup() {
-  pinMode(13, OUTPUT);
-}
-
-void loop() {
-  digitalWrite(13, HIGH);
-  delay(1000);
-  digitalWrite(13, LOW);
-  delay(1000);
-}</code></pre>
-
-          <a class="btn" href="https://wokwi.com/projects/458152142119305217" target="_blank">Open Task 1</a>
+        <div class="info-boxes">
+          <div class="info-box">
+            <h4>Project Name</h4>
+            <p>Locker Safety Indicator</p>
+          </div>
+          <div class="info-box">
+            <h4>Where We Use It</h4>
+            <p>School lockers and campus safety systems.</p>
+          </div>
         </div>
 
-        <div class="task-card">
-          <h3>Task 2 - Potentiometer Controls LED</h3>
-          <p>
-            The potentiometer value is read through analog input and mapped to
-            PWM output to control LED brightness.
-          </p>
-
+        <div class="uses">
+          <h4>Real-World Use</h4>
           <ul>
-            <li>Arduino UNO</li>
-            <li>Potentiometer</li>
-            <li>LED</li>
-            <li>Resistor</li>
+            <li>School locker systems</li>
+            <li>Student storage safety</li>
+            <li>Campus monitoring</li>
           </ul>
-
-          <pre><code>int pot = A0;
-int led = 9;
-
-void setup() {
-  pinMode(led, OUTPUT);
-  Serial.begin(9600);
-}
-
-void loop() {
-  int value = analogRead(pot);
-  int brightness = map(value, 0, 1023, 0, 255);
-  analogWrite(led, brightness);
-
-  Serial.print("Pot Value: ");
-  Serial.print(value);
-  Serial.print("  Brightness: ");
-  Serial.println(brightness);
-
-  delay(200);
-}</code></pre>
-
-          <a class="btn" href="https://wokwi.com/projects/458153741241944065" target="_blank">Open Task 2</a>
         </div>
 
-        <div class="task-card">
-          <h3>Task 3 - Push Button Controls LED</h3>
-          <p>
-            Pressing the push button turns the LED ON. Releasing the button turns
-            the LED OFF.
-          </p>
+        <a class="project-link" href="https://wokwi.com/projects/458152142119305217" target="_blank">
+          Open Project
+        </a>
+      </div>
 
-          <ul>
-            <li>Arduino UNO</li>
-            <li>Push Button</li>
-            <li>LED</li>
-            <li>Resistor</li>
-          </ul>
+      <div id="fan" class="project-detail">
+        <div class="detail-badge blue">Automation</div>
+        <h3>Automatic Fan Speed Control</h3>
+        <p class="detail-text">
+          This project controls fan speed based on temperature. As temperature increases, fan speed also increases.
+          In simulation, LED brightness represents the speed of the fan.
+        </p>
 
-          <pre><code>int button = 2;
-int led = 13;
-
-void setup() {
-  pinMode(button, INPUT_PULLUP);
-  pinMode(led, OUTPUT);
-}
-
-void loop() {
-  if (digitalRead(button) == LOW) {
-    digitalWrite(led, HIGH);
-  } else {
-    digitalWrite(led, LOW);
-  }
-}</code></pre>
-
-          <a class="btn" href="https://wokwi.com/projects/458185856014685185" target="_blank">Open Task 3</a>
+        <div class="info-boxes">
+          <div class="info-box">
+            <h4>Project Name</h4>
+            <p>Automatic Fan Speed Control</p>
+          </div>
+          <div class="info-box">
+            <h4>Where We Use It</h4>
+            <p>Laptops, smart home ventilation, and automatic room fans.</p>
+          </div>
         </div>
 
-        <div class="task-card">
-          <h3>Task 4 - Push Button Controls Buzzer</h3>
-          <p>
-            Pressing the button activates the buzzer. Releasing the button turns
-            the buzzer OFF.
-          </p>
-
+        <div class="uses">
+          <h4>Real-World Use</h4>
           <ul>
-            <li>Arduino UNO</li>
-            <li>Push Button</li>
-            <li>Buzzer</li>
+            <li>Laptop cooling systems</li>
+            <li>Smart home ventilation</li>
+            <li>Automatic room fan systems</li>
           </ul>
-
-          <pre><code>int button = 2;
-int buzzer = 8;
-
-void setup() {
-  pinMode(button, INPUT_PULLUP);
-  pinMode(buzzer, OUTPUT);
-}
-
-void loop() {
-  if (digitalRead(button) == LOW) {
-    digitalWrite(buzzer, HIGH);
-  } else {
-    digitalWrite(buzzer, LOW);
-  }
-}</code></pre>
-
-          <a class="btn" href="https://wokwi.com/projects/458225116736353281" target="_blank">Open Task 4</a>
         </div>
+
+        <a class="project-link" href="https://wokwi.com/projects/458153741241944065" target="_blank">
+          Open Project
+        </a>
+      </div>
+
+      <div id="gate" class="project-detail">
+        <div class="detail-badge purple">Interaction</div>
+        <h3>Parking Gate Control System</h3>
+        <p class="detail-text">
+          This project simulates a parking gate system where pressing a button opens the gate
+          and releasing the button closes it. The LED represents the gate status.
+        </p>
+
+        <div class="info-boxes">
+          <div class="info-box">
+            <h4>Project Name</h4>
+            <p>Parking Gate Control System</p>
+          </div>
+          <div class="info-box">
+            <h4>Where We Use It</h4>
+            <p>Parking lots, apartment entrances, and controlled gate systems.</p>
+          </div>
+        </div>
+
+        <div class="uses">
+          <h4>Real-World Use</h4>
+          <ul>
+            <li>Parking lot entrances</li>
+            <li>Apartment gate systems</li>
+            <li>Access control points</li>
+          </ul>
+        </div>
+
+        <a class="project-link" href="https://wokwi.com/projects/458185856014685185" target="_blank">
+          Open Project
+        </a>
+      </div>
+
+      <div id="water" class="project-detail">
+        <div class="detail-badge green">Alert</div>
+        <h3>Water Level Alert System</h3>
+        <p class="detail-text">
+          This project uses a buzzer to alert users when the water level reaches a limit.
+          It is useful for preventing overflow in tanks and supporting better water management.
+        </p>
+
+        <div class="info-boxes">
+          <div class="info-box">
+            <h4>Project Name</h4>
+            <p>Water Level Alert System</p>
+          </div>
+          <div class="info-box">
+            <h4>Where We Use It</h4>
+            <p>Home water tanks, industrial tanks, and smart water systems.</p>
+          </div>
+        </div>
+
+        <div class="uses">
+          <h4>Real-World Use</h4>
+          <ul>
+            <li>Home water tank monitoring</li>
+            <li>Industrial storage tanks</li>
+            <li>Water overflow prevention</li>
+          </ul>
+        </div>
+
+        <a class="project-link" href="https://wokwi.com/projects/458225116736353281" target="_blank">
+          Open Project
+        </a>
+      </div>
+
+      <div id="reaction" class="project-detail">
+        <div class="detail-badge orange">Testing</div>
+        <h3>Human Reaction Time Measurement System</h3>
+        <p class="detail-text">
+          This project measures how quickly a person responds to a visual signal.
+          When the LED turns on, the user presses the button and Arduino calculates the reaction time.
+        </p>
+
+        <div class="info-boxes">
+          <div class="info-box">
+            <h4>Project Name</h4>
+            <p>Human Reaction Time Measurement System</p>
+          </div>
+          <div class="info-box">
+            <h4>Where We Use It</h4>
+            <p>Sports training, reflex testing, medical checks, and driving response tests.</p>
+          </div>
+        </div>
+
+        <div class="uses">
+          <h4>Real-World Use</h4>
+          <ul>
+            <li>Sports reaction training</li>
+            <li>Driving response testing</li>
+            <li>Cognitive and reflex measurement</li>
+          </ul>
+        </div>
+
+        <a class="project-link" href="https://wokwi.com/projects/458595924741575681" target="_blank">
+          Open Project
+        </a>
       </div>
     </section>
   </main>
+
+  <footer class="footer">
+    Created by ELDHO BABU
+  </footer>
+
+  <script>
+    const cards = document.querySelectorAll(".project-card");
+    const details = document.querySelectorAll(".project-detail");
+
+    cards.forEach((card) => {
+      card.addEventListener("click", () => {
+        const target = card.getAttribute("data-project");
+
+        cards.forEach((c) => c.classList.remove("active"));
+        details.forEach((d) => d.classList.remove("active"));
+
+        card.classList.add("active");
+        document.getElementById(target).classList.add("active");
+      });
+    });
+  </script>
 </body>
 </html>
