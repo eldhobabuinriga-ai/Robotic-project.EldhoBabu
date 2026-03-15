@@ -7,236 +7,234 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="bg-orb orb1"></div>
-  <div class="bg-orb orb2"></div>
-  <div class="bg-orb orb3"></div>
+  <div class="bg-grid"></div>
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+  <div class="orb orb3"></div>
 
   <header class="hero">
-    <p class="tag">Arduino Portfolio</p>
+    <div class="hero-badge">Future Tech Portfolio</div>
     <h1>ROBOTICS PROJECT</h1>
-    <p class="subtitle">
-      A colorful and futuristic project showcase with interactive project cards and live simulation links.
+    <p class="hero-text">
+      Interactive flashcards for Arduino projects with colorful neon effects and live simulation links.
     </p>
   </header>
 
-  <main class="container">
-    <section class="project-grid">
-      <div class="project-card active" data-project="locker">
-        <span class="project-number">Project 01</span>
-        <h2>Locker Safety Indicator</h2>
-        <p>Used in school lockers for safety monitoring.</p>
+  <main class="wrapper">
+    <section class="flashcard-grid">
+      <div class="flashcard active" data-project="locker">
+        <div class="flashcard-inner">
+          <div class="flashcard-front pink">
+            <span class="project-no">01</span>
+            <h2>Locker Safety Indicator</h2>
+            <p>School safety system</p>
+          </div>
+          <div class="flashcard-back">
+            <h3>Where we use it</h3>
+            <p>School lockers, student storage areas, campus monitoring</p>
+            <button class="open-btn" data-target="locker">View Project</button>
+          </div>
+        </div>
       </div>
 
-      <div class="project-card" data-project="fan">
-        <span class="project-number">Project 02</span>
-        <h2>Automatic Fan Speed Control</h2>
-        <p>Used in laptop cooling, smart home ventilation, and room fans.</p>
+      <div class="flashcard" data-project="fan">
+        <div class="flashcard-inner">
+          <div class="flashcard-front blue">
+            <span class="project-no">02</span>
+            <h2>Automatic Fan Speed Control</h2>
+            <p>Temperature-based cooling</p>
+          </div>
+          <div class="flashcard-back">
+            <h3>Where we use it</h3>
+            <p>Laptops, smart home ventilation, automatic room fans</p>
+            <button class="open-btn" data-target="fan">View Project</button>
+          </div>
+        </div>
       </div>
 
-      <div class="project-card" data-project="gate">
-        <span class="project-number">Project 03</span>
-        <h2>Parking Gate Control System</h2>
-        <p>Used in parking lots and apartment entrances.</p>
+      <div class="flashcard" data-project="gate">
+        <div class="flashcard-inner">
+          <div class="flashcard-front purple">
+            <span class="project-no">03</span>
+            <h2>Parking Gate Control System</h2>
+            <p>User interaction system</p>
+          </div>
+          <div class="flashcard-back">
+            <h3>Where we use it</h3>
+            <p>Parking lots, apartment entrances, access control points</p>
+            <button class="open-btn" data-target="gate">View Project</button>
+          </div>
+        </div>
       </div>
 
-      <div class="project-card" data-project="water">
-        <span class="project-number">Project 04</span>
-        <h2>Water Level Alert System</h2>
-        <p>Used in water tanks to prevent overflow.</p>
+      <div class="flashcard" data-project="water">
+        <div class="flashcard-inner">
+          <div class="flashcard-front green">
+            <span class="project-no">04</span>
+            <h2>Water Level Alert System</h2>
+            <p>Alert and notification</p>
+          </div>
+          <div class="flashcard-back">
+            <h3>Where we use it</h3>
+            <p>Home water tanks, industrial tanks, overflow prevention</p>
+            <button class="open-btn" data-target="water">View Project</button>
+          </div>
+        </div>
       </div>
 
-      <div class="project-card" data-project="reaction">
-        <span class="project-number">Project 05</span>
-        <h2>Human Reaction Time Measurement System</h2>
-        <p>Used in sports training, reflex testing, and driving response checks.</p>
+      <div class="flashcard" data-project="reaction">
+        <div class="flashcard-inner">
+          <div class="flashcard-front orange">
+            <span class="project-no">05</span>
+            <h2>Human Reaction Time Measurement System</h2>
+            <p>Reflex and response testing</p>
+          </div>
+          <div class="flashcard-back">
+            <h3>Where we use it</h3>
+            <p>Sports training, driving tests, reflex measurement</p>
+            <button class="open-btn" data-target="reaction">View Project</button>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="details-panel">
       <div id="locker" class="project-detail active">
-        <div class="detail-badge pink">Safety</div>
-        <h3>Locker Safety Indicator</h3>
-        <p class="detail-text">
-          This project is used in <strong>school lockers</strong> to monitor whether a locker is open or closed.
-          If the locker is left open, the warning indicator helps students and staff notice it quickly.
+        <div class="detail-tag pink-tag">Project 01</div>
+        <h2>Locker Safety Indicator</h2>
+        <p class="detail-desc">
+          This project is used in school lockers to indicate whether a locker is left open.
+          It helps improve student safety and supports quick monitoring in schools.
         </p>
-
-        <div class="info-boxes">
-          <div class="info-box">
+        <div class="detail-info">
+          <div class="info-card">
             <h4>Project Name</h4>
             <p>Locker Safety Indicator</p>
           </div>
-          <div class="info-box">
+          <div class="info-card">
             <h4>Where We Use It</h4>
-            <p>School lockers and campus safety systems.</p>
+            <p>School lockers and campus safety systems</p>
           </div>
         </div>
-
-        <div class="uses">
-          <h4>Real-World Use</h4>
-          <ul>
-            <li>School locker systems</li>
-            <li>Student storage safety</li>
-            <li>Campus monitoring</li>
-          </ul>
-        </div>
-
-        <a class="project-link" href="https://wokwi.com/projects/458152142119305217" target="_blank">
-          Open Project
-        </a>
+        <a href="https://wokwi.com/projects/458152142119305217" target="_blank" class="project-link">Open Project</a>
       </div>
 
       <div id="fan" class="project-detail">
-        <div class="detail-badge blue">Automation</div>
-        <h3>Automatic Fan Speed Control</h3>
-        <p class="detail-text">
-          This project controls fan speed based on temperature. As temperature increases, fan speed also increases.
-          In simulation, LED brightness represents the speed of the fan.
+        <div class="detail-tag blue-tag">Project 02</div>
+        <h2>Automatic Fan Speed Control</h2>
+        <p class="detail-desc">
+          This project automatically adjusts cooling level based on temperature.
+          It is useful in modern cooling and ventilation systems.
         </p>
-
-        <div class="info-boxes">
-          <div class="info-box">
+        <div class="detail-info">
+          <div class="info-card">
             <h4>Project Name</h4>
             <p>Automatic Fan Speed Control</p>
           </div>
-          <div class="info-box">
+          <div class="info-card">
             <h4>Where We Use It</h4>
-            <p>Laptops, smart home ventilation, and automatic room fans.</p>
+            <p>Laptop cooling, smart homes, room ventilation</p>
           </div>
         </div>
-
-        <div class="uses">
-          <h4>Real-World Use</h4>
-          <ul>
-            <li>Laptop cooling systems</li>
-            <li>Smart home ventilation</li>
-            <li>Automatic room fan systems</li>
-          </ul>
-        </div>
-
-        <a class="project-link" href="https://wokwi.com/projects/458153741241944065" target="_blank">
-          Open Project
-        </a>
+        <a href="https://wokwi.com/projects/458153741241944065" target="_blank" class="project-link">Open Project</a>
       </div>
 
       <div id="gate" class="project-detail">
-        <div class="detail-badge purple">Interaction</div>
-        <h3>Parking Gate Control System</h3>
-        <p class="detail-text">
-          This project simulates a parking gate system where pressing a button opens the gate
-          and releasing the button closes it. The LED represents the gate status.
+        <div class="detail-tag purple-tag">Project 03</div>
+        <h2>Parking Gate Control System</h2>
+        <p class="detail-desc">
+          This project simulates a gate system where a user button opens and closes the gate.
+          It is useful for access control applications.
         </p>
-
-        <div class="info-boxes">
-          <div class="info-box">
+        <div class="detail-info">
+          <div class="info-card">
             <h4>Project Name</h4>
             <p>Parking Gate Control System</p>
           </div>
-          <div class="info-box">
+          <div class="info-card">
             <h4>Where We Use It</h4>
-            <p>Parking lots, apartment entrances, and controlled gate systems.</p>
+            <p>Parking areas, apartments, controlled entrances</p>
           </div>
         </div>
-
-        <div class="uses">
-          <h4>Real-World Use</h4>
-          <ul>
-            <li>Parking lot entrances</li>
-            <li>Apartment gate systems</li>
-            <li>Access control points</li>
-          </ul>
-        </div>
-
-        <a class="project-link" href="https://wokwi.com/projects/458185856014685185" target="_blank">
-          Open Project
-        </a>
+        <a href="https://wokwi.com/projects/458185856014685185" target="_blank" class="project-link">Open Project</a>
       </div>
 
       <div id="water" class="project-detail">
-        <div class="detail-badge green">Alert</div>
-        <h3>Water Level Alert System</h3>
-        <p class="detail-text">
-          This project uses a buzzer to alert users when the water level reaches a limit.
-          It is useful for preventing overflow in tanks and supporting better water management.
+        <div class="detail-tag green-tag">Project 04</div>
+        <h2>Water Level Alert System</h2>
+        <p class="detail-desc">
+          This project uses a buzzer to alert users when water reaches a limit.
+          It helps avoid overflow and improves water monitoring.
         </p>
-
-        <div class="info-boxes">
-          <div class="info-box">
+        <div class="detail-info">
+          <div class="info-card">
             <h4>Project Name</h4>
             <p>Water Level Alert System</p>
           </div>
-          <div class="info-box">
+          <div class="info-card">
             <h4>Where We Use It</h4>
-            <p>Home water tanks, industrial tanks, and smart water systems.</p>
+            <p>Water tanks, industrial storage, smart water systems</p>
           </div>
         </div>
-
-        <div class="uses">
-          <h4>Real-World Use</h4>
-          <ul>
-            <li>Home water tank monitoring</li>
-            <li>Industrial storage tanks</li>
-            <li>Water overflow prevention</li>
-          </ul>
-        </div>
-
-        <a class="project-link" href="https://wokwi.com/projects/458225116736353281" target="_blank">
-          Open Project
-        </a>
+        <a href="https://wokwi.com/projects/458225116736353281" target="_blank" class="project-link">Open Project</a>
       </div>
 
       <div id="reaction" class="project-detail">
-        <div class="detail-badge orange">Testing</div>
-        <h3>Human Reaction Time Measurement System</h3>
-        <p class="detail-text">
+        <div class="detail-tag orange-tag">Project 05</div>
+        <h2>Human Reaction Time Measurement System</h2>
+        <p class="detail-desc">
           This project measures how quickly a person responds to a visual signal.
-          When the LED turns on, the user presses the button and Arduino calculates the reaction time.
+          It is useful in reflex testing, sports training, and response measurement.
         </p>
-
-        <div class="info-boxes">
-          <div class="info-box">
+        <div class="detail-info">
+          <div class="info-card">
             <h4>Project Name</h4>
             <p>Human Reaction Time Measurement System</p>
           </div>
-          <div class="info-box">
+          <div class="info-card">
             <h4>Where We Use It</h4>
-            <p>Sports training, reflex testing, medical checks, and driving response tests.</p>
+            <p>Sports training, reflex tests, driving response checks</p>
           </div>
         </div>
-
-        <div class="uses">
-          <h4>Real-World Use</h4>
-          <ul>
-            <li>Sports reaction training</li>
-            <li>Driving response testing</li>
-            <li>Cognitive and reflex measurement</li>
-          </ul>
-        </div>
-
-        <a class="project-link" href="https://wokwi.com/projects/458595924741575681" target="_blank">
-          Open Project
-        </a>
+        <a href="https://wokwi.com/projects/458595924741575681" target="_blank" class="project-link">Open Project</a>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    Created by ELDHO BABU
-  </footer>
+  <footer class="footer">Created by ELDHO BABU</footer>
 
   <script>
-    const cards = document.querySelectorAll(".project-card");
+    const flashcards = document.querySelectorAll(".flashcard");
     const details = document.querySelectorAll(".project-detail");
+    const openButtons = document.querySelectorAll(".open-btn");
 
-    cards.forEach((card) => {
+    function openProject(targetId) {
+      flashcards.forEach(card => {
+        card.classList.remove("active");
+        if (card.dataset.project === targetId) {
+          card.classList.add("active");
+        }
+      });
+
+      details.forEach(detail => detail.classList.remove("active"));
+      document.getElementById(targetId).classList.add("active");
+
+      document.querySelector(".details-panel").scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+
+    flashcards.forEach(card => {
       card.addEventListener("click", () => {
-        const target = card.getAttribute("data-project");
+        openProject(card.dataset.project);
+      });
+    });
 
-        cards.forEach((c) => c.classList.remove("active"));
-        details.forEach((d) => d.classList.remove("active"));
-
-        card.classList.add("active");
-        document.getElementById(target).classList.add("active");
+    openButtons.forEach(button => {
+      button.addEventListener("click", (e) => {
+        e.stopPropagation();
+        openProject(button.dataset.target);
       });
     });
   </script>
