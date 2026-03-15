@@ -8,66 +8,177 @@
 </head>
 <body>
   <div class="bg-grid"></div>
-  <div class="orb orb1"></div>
-  <div class="orb orb2"></div>
-  <div class="orb orb3"></div>
+  <div class="glow glow-1"></div>
+  <div class="glow glow-2"></div>
+  <div class="glow glow-3"></div>
 
-  <header class="hero">
-    <p class="hero-tag">Futuristic Arduino Portfolio</p>
-    <h1>ROBOTICS PROJECT</h1>
-    <p class="hero-sub">
-      Big neon flashcards for each robotics project with project name and real-world use.
-    </p>
-  </header>
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">⚡</div>
+        <div>
+          <h2>ROBOTICS PROJECT</h2>
+          <p>System Online</p>
+        </div>
+      </div>
 
-  <main class="container">
-    <section class="cards-section">
+      <nav class="nav-block">
+        <p class="nav-title">MAIN</p>
+        <a href="#home" class="nav-link active">Home</a>
+      </nav>
 
-      <a class="flashcard neon-pink" href="https://wokwi.com/projects/458152142119305217" target="_blank">
-        <div class="card-number">01</div>
-        <div class="card-glow"></div>
-        <h2 class="project-title">Locker Safety Indicator</h2>
-        <p class="use-label">Where we use this project</p>
-        <p class="use-text">School lockers, student storage areas, campus monitoring systems</p>
-      </a>
+      <nav class="nav-block">
+        <p class="nav-title">PROJECTS</p>
+        <a href="#project1" class="nav-link">Locker Safety Indicator</a>
+        <a href="#project2" class="nav-link">Automatic Fan Speed Control</a>
+        <a href="#project3" class="nav-link">Parking Gate Control System</a>
+        <a href="#project4" class="nav-link">Water Level Alert System</a>
+        <a href="#project5" class="nav-link">Human Reaction Time Measurement</a>
+      </nav>
+    </aside>
 
-      <a class="flashcard neon-blue" href="https://wokwi.com/projects/458153741241944065" target="_blank">
-        <div class="card-number">02</div>
-        <div class="card-glow"></div>
-        <h2 class="project-title">Automatic Fan Speed Control</h2>
-        <p class="use-label">Where we use this project</p>
-        <p class="use-text">Laptop cooling systems, smart home ventilation, automatic room fans</p>
-      </a>
+    <main class="main-content" id="home">
+      <section class="hero">
+        <div class="status-pill">Futuristic Arduino Portfolio</div>
+        <h1>ROBOTICS PROJECT</h1>
+        <p>
+          Big neon flashcards for each robotics project with the project name and where we use this project.
+        </p>
 
-      <a class="flashcard neon-purple" href="https://wokwi.com/projects/458185856014685185" target="_blank">
-        <div class="card-number">03</div>
-        <div class="card-glow"></div>
-        <h2 class="project-title">Parking Gate Control System</h2>
-        <p class="use-label">Where we use this project</p>
-        <p class="use-text">Parking lots, apartment entrances, controlled access gate systems</p>
-      </a>
+        <div class="hero-stats">
+          <div class="stat-card">
+            <span>5</span>
+            <p>Projects</p>
+          </div>
+          <div class="stat-card">
+            <span>100%</span>
+            <p>Portfolio Ready</p>
+          </div>
+          <div class="stat-card">
+            <span>Live</span>
+            <p>Wokwi Links</p>
+          </div>
+        </div>
+      </section>
 
-      <a class="flashcard neon-green" href="https://wokwi.com/projects/458225116736353281" target="_blank">
-        <div class="card-number">04</div>
-        <div class="card-glow"></div>
-        <h2 class="project-title">Water Level Alert System</h2>
-        <p class="use-label">Where we use this project</p>
-        <p class="use-text">Home water tanks, industrial tanks, overflow prevention systems</p>
-      </a>
+      <section class="section-header">
+        <h2>Quick Access</h2>
+        <p>Open any project directly from the flashcards below.</p>
+      </section>
 
-      <a class="flashcard neon-orange" href="https://wokwi.com/projects/458595924741575681" target="_blank">
-        <div class="card-number">05</div>
-        <div class="card-glow"></div>
-        <h2 class="project-title">Human Reaction Time Measurement System</h2>
-        <p class="use-label">Where we use this project</p>
-        <p class="use-text">Sports training, reflex testing, cognitive response, driving tests</p>
-      </a>
+      <section class="flashcard-grid">
+        <a class="flashcard pink-theme" href="https://wokwi.com/projects/458152142119305217" target="_blank" id="project1">
+          <div class="flashcard-top">
+            <span class="flash-no">01</span>
+            <span class="flash-badge">School Safety</span>
+          </div>
+          <h3 class="project-name">Locker Safety Indicator</h3>
+          <p class="use-title">Where we use this project</p>
+          <p class="use-text">School lockers, student storage areas, campus monitoring systems</p>
+          <span class="open-link">Click to open →</span>
+        </a>
 
-    </section>
-  </main>
+        <a class="flashcard blue-theme" href="https://wokwi.com/projects/458153741241944065" target="_blank" id="project2">
+          <div class="flashcard-top">
+            <span class="flash-no">02</span>
+            <span class="flash-badge">Automation</span>
+          </div>
+          <h3 class="project-name">Automatic Fan Speed Control</h3>
+          <p class="use-title">Where we use this project</p>
+          <p class="use-text">Laptop cooling systems, smart home ventilation, automatic room fans</p>
+          <span class="open-link">Click to open →</span>
+        </a>
 
-  <footer class="footer">
-    Created by ELDHO BABU
-  </footer>
+        <a class="flashcard purple-theme" href="https://wokwi.com/projects/458185856014685185" target="_blank" id="project3">
+          <div class="flashcard-top">
+            <span class="flash-no">03</span>
+            <span class="flash-badge">User Interaction</span>
+          </div>
+          <h3 class="project-name">Parking Gate Control System</h3>
+          <p class="use-title">Where we use this project</p>
+          <p class="use-text">Parking lots, apartment entrances, controlled access gate systems</p>
+          <span class="open-link">Click to open →</span>
+        </a>
+
+        <a class="flashcard green-theme" href="https://wokwi.com/projects/458225116736353281" target="_blank" id="project4">
+          <div class="flashcard-top">
+            <span class="flash-no">04</span>
+            <span class="flash-badge">Alert System</span>
+          </div>
+          <h3 class="project-name">Water Level Alert System</h3>
+          <p class="use-title">Where we use this project</p>
+          <p class="use-text">Home water tanks, industrial tanks, overflow prevention systems</p>
+          <span class="open-link">Click to open →</span>
+        </a>
+
+        <a class="flashcard orange-theme" href="https://wokwi.com/projects/458595924741575681" target="_blank" id="project5">
+          <div class="flashcard-top">
+            <span class="flash-no">05</span>
+            <span class="flash-badge">Testing</span>
+          </div>
+          <h3 class="project-name">Human Reaction Time Measurement System</h3>
+          <p class="use-title">Where we use this project</p>
+          <p class="use-text">Sports training, reflex testing, cognitive response, driving tests</p>
+          <span class="open-link">Click to open →</span>
+        </a>
+      </section>
+
+      <section class="project-panels">
+        <div class="panel">
+          <div class="panel-head">
+            <span class="panel-tag pink-tag">Project 01</span>
+            <h2>Locker Safety Indicator</h2>
+          </div>
+          <p class="panel-desc">
+            This project is used in school lockers to indicate whether a locker is open or closed. It supports student safety and campus monitoring.
+          </p>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head">
+            <span class="panel-tag blue-tag">Project 02</span>
+            <h2>Automatic Fan Speed Control</h2>
+          </div>
+          <p class="panel-desc">
+            This project automatically changes cooling level based on temperature. It is useful for laptops, smart homes, and room ventilation.
+          </p>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head">
+            <span class="panel-tag purple-tag">Project 03</span>
+            <h2>Parking Gate Control System</h2>
+          </div>
+          <p class="panel-desc">
+            This project simulates a parking or entrance gate controlled by user input. It is useful in parking lots and apartment entrances.
+          </p>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head">
+            <span class="panel-tag green-tag">Project 04</span>
+            <h2>Water Level Alert System</h2>
+          </div>
+          <p class="panel-desc">
+            This project alerts users when water reaches a certain level. It is practical for tank monitoring and overflow prevention.
+          </p>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head">
+            <span class="panel-tag orange-tag">Project 05</span>
+            <h2>Human Reaction Time Measurement System</h2>
+          </div>
+          <p class="panel-desc">
+            This project measures how quickly a person responds to a visual signal. It is useful for sports, reflex testing, and driving response checks.
+          </p>
+        </div>
+      </section>
+
+      <footer class="footer">
+        Created by ELDHO BABU
+      </footer>
+    </main>
+  </div>
 </body>
 </html>
