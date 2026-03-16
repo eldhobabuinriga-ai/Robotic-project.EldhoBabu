@@ -30,7 +30,6 @@ background:linear-gradient(135deg,#0a1724,#112535);
 
 }
 
-
 .page-layout{
 
 display:flex;
@@ -77,7 +76,6 @@ margin-bottom:28px;
 .logo-box{
 
 width:56px;
-
 height:56px;
 
 border-radius:16px;
@@ -168,7 +166,6 @@ padding:36px 28px;
 
 }
 
-
 .hero{
 
 text-align:center;
@@ -220,6 +217,7 @@ font-size:1rem;
 }
 
 
+
 /* PROJECT SECTION */
 
 .projects-grid{
@@ -257,7 +255,6 @@ box-shadow:0 10px 30px rgba(0,0,0,.10);
 .project-icon{
 
 width:160px;
-
 height:160px;
 
 border-radius:50%;
@@ -276,9 +273,11 @@ margin-bottom:28px;
 
 }
 
+/* PROJECT NAME COLOR FIXED HERE */
+
 .project-title{
 
-color:white;
+color:#000;
 
 font-size:1.15rem;
 
@@ -336,6 +335,7 @@ font-size:1rem;
 }
 
 
+
 /* RESPONSIVE */
 
 @media(max-width:1100px){
@@ -385,7 +385,6 @@ min-height:auto;
 .project-icon{
 
 width:140px;
-
 height:140px;
 
 font-size:4rem;
